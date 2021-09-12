@@ -175,7 +175,7 @@ mode "$mode_gaps_inner" {
 
 # Launch rofi as app launcher
 # With flag -theme a rofi.rasi theme can be applied
-bindsym $mod+space exec rofi -show drun -theme ~/.cache/wal/colors-rofi-dark.rasi -show-icons -icon-theme papirus-icon-theme
+bindsym $mod+space exec rofi -show drun -theme ~/.config/rofi/colors-rofi-dark.rasi -show-icons -icon-theme papirus-icon-theme
 
 #Launch firefox
 bindsym $mod+Shift+Return exec firefox
