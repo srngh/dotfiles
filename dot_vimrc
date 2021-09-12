@@ -1,0 +1,14 @@
+" System-wide vim configuration
+
+set nocompatible
+set backspace=indent,eol,start
+set history=50
+set ruler
+set number
+set ts=4
+
+autocmd BufWritePost ~/.local/share/chezmoi/* ! chezmoi apply --source-path %
+
+if filereadable("/etc/vimrc.local")
+  source /etc/vimrc.local
+endif

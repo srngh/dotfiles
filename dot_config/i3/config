@@ -108,6 +108,12 @@ bindsym $mod+$alt+BackSpace exec setxkbmap de && notify-send 'keymap change' 'is
 # change keymap to ansi layout
 bindsym $mod+$alt+Shift+BackSpace exec setxkbmap us && notify-send 'keymap change' 'ansi-us keymap'
 
+# disable focus follows mouse
+focus_follows_mouse no
+
+mouse_warping none
+
+
 ##################################################################
 #  _ _____                             
 # (_)___ /        __ _  __ _ _ __  ___ 
