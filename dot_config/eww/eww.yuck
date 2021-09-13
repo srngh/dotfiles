@@ -1,0 +1,36 @@
+(defwindow lg
+  :class "lg"
+  :monitor 0
+  :geometry (geometry :x "0%"
+                      :y "0%"
+                      :width "17%"
+                      :height "9%"
+                      :anchor "center")
+  :stacking "fg"
+  :windowtype "normal"
+  :wm-ignore false
+  (logout)
+)
+
+(defwidget logout []
+  (box :class "log"
+       :orientation "horizontal"
+       :halign "center"
+       :valign "center"
+    (button :class "power_btn" 
+            :onclick "shutdown -P now"
+      "⏻")
+      "|"
+    (button :class "reboot_btn" 
+            :onclick "shutdown -r now"
+      "ﰇ")
+      "|"
+    (button :class "logout_btn" 
+            :onclick "i3-msg exit"
+      "﫼  ")
+      "|"
+    (button :class "cancel_btn"
+            :onclick "eww close lg"
+      "")
+    
+      ))
