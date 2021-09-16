@@ -12,11 +12,11 @@
   (logout)
 )
 
+
 (defwidget logout []
   (box :class "log"
        :orientation "horizontal"
        :halign "center"
-       :valign "center"
     (button :class "power_btn" 
             :onclick "shutdown -P now"
       "⏻")
@@ -32,5 +32,9 @@
     (button :class "cancel_btn"
             :onclick "eww close lg"
       "")
-    
-      ))
+      )
+)
+
+
+
+(include "/home/soeren/.config/eww/progressbar.yuck")
