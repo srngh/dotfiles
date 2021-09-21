@@ -1,0 +1,28 @@
+(defwindow st
+  :class "st"
+  :monitor 0
+  :geometry (geometry :x "0%"
+                      :y "0%"
+                      :width "17%"
+                      :height "9%"
+                      :anchor "center")
+  :stacking "fg"
+  :windowtype "normal"
+  :wm-ignore false
+  (brogress :seconds 1)
+)
+
+(defpoll st_timer :interval "1s" "scripts/timescript.sh")
+
+
+(defwidget brogress [seconds]
+  (box :class "metric"
+       :orientation "horizontal"
+       :halign "center"
+    (scale    :min 0
+              :max 11
+              :value {st_timer}
+              :active false
+              :orientation "horizontal"
+              :onchange "if [ $(cat scripts/second.txt) -eq 0 ]; then eww close st; fi"
+    )))
