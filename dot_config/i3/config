@@ -134,6 +134,8 @@ mouse_warping none
 # 
 ##################################################################
 
+smart_gaps on
+
 gaps inner 7
 
 set $mode_gaps Gaps: (o)uter, (i)nner
