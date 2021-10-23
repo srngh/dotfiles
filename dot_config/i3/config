@@ -85,7 +85,7 @@ exec --no-startup-id picom -b
 # feh is a lightweight image viewer which is used to display a wallpaper
 # now using nitrogen
 
-# exec --no-startup-id feh --bg-scale $wallpaper
+# exec --no-startup-id feh --no-fehbg --bg-scale $wallpaper
 exec --no-startup-id nitrogen --restore
 
 # eww is a widget program written in rust
